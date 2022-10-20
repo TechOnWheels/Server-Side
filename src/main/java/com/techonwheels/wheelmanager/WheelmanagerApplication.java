@@ -1,13 +1,13 @@
-package com.wheelmanager.serverside;
+package com.techonwheels.wheelmanager;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ServerSideApplication {
+public class WheelmanagerApplication {
     
     public static void main(String[] args) {
-        SpringApplication.run(ServerSideApplication.class, args);
+        SpringApplication.run(WheelmanagerApplication.class, args);
     }
     
 }
