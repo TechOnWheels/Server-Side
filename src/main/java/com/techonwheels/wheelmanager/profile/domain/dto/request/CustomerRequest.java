@@ -1,11 +1,11 @@
-package com.techonwheels.wheelmanager.profile.domain.models.response;
+package com.techonwheels.wheelmanager.profile.domain.dto.request;
 
 import lombok.Builder;
 import lombok.Data;
 
 @Data
 @Builder
-public class CustomerResponse {
+public class CustomerRequest {
     private String name;
     private String email;
     private String phone;

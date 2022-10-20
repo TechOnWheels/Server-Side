@@ -1,7 +1,7 @@
 package com.techonwheels.wheelmanager.profile.presentation.controllers.commands;
 
 import com.techonwheels.wheelmanager.profile.application.commands.CreateCustomerCommand;
-import com.techonwheels.wheelmanager.profile.domain.models.request.CustomerRequest;
+import com.techonwheels.wheelmanager.profile.domain.dto.request.CustomerRequest;
 import org.axonframework.commandhandling.gateway.CommandGateway;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
