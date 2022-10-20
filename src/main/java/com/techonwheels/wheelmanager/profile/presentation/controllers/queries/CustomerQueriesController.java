@@ -1,7 +1,7 @@
-package com.techonwheels.wheelmanager.profile.presentation.queries.controller;
+package com.techonwheels.wheelmanager.profile.presentation.controllers.queries;
 
 import com.techonwheels.wheelmanager.profile.application.queries.GetCustomersQuery;
-import com.techonwheels.wheelmanager.profile.domain.dto.CustomerResponse;
+import com.techonwheels.wheelmanager.profile.domain.models.response.CustomerResponse;
 import org.axonframework.messaging.responsetypes.ResponseTypes;
 import org.axonframework.queryhandling.QueryGateway;
 import org.springframework.web.bind.annotation.GetMapping;

@@ -3,7 +3,7 @@ package com.techonwheels.wheelmanager.profile.application.handlers;
 import com.techonwheels.wheelmanager.profile.application.events.CustomerCreatedEvent;
 import com.techonwheels.wheelmanager.profile.application.queries.GetCustomersQuery;
 import com.techonwheels.wheelmanager.profile.domain.data.Customer;
-import com.techonwheels.wheelmanager.profile.domain.dto.CustomerResponse;
+import com.techonwheels.wheelmanager.profile.domain.models.response.CustomerResponse;
 import com.techonwheels.wheelmanager.profile.domain.repositories.CustomerRepository;
 import org.axonframework.eventhandling.EventHandler;
 import org.axonframework.queryhandling.QueryHandler;
