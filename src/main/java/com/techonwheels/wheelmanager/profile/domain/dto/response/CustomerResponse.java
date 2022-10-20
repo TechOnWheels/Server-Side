@@ -1,15 +1,11 @@
-package com.techonwheels.wheelmanager.profile.application.events;
+package com.techonwheels.wheelmanager.profile.domain.dto.response;
 
-import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 @Data
 @Builder
-@AllArgsConstructor
-@NoArgsConstructor
-public class CustomerCreatedEvent {
+public class CustomerResponse {
     private String customerId;
     private String name;
     private String email;
