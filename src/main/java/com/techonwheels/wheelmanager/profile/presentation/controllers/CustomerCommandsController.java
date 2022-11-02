@@ -1,4 +1,4 @@
-package com.techonwheels.wheelmanager.profile.presentation.controllers.commands;
+package com.techonwheels.wheelmanager.profile.presentation.controllers;
 
 import com.techonwheels.wheelmanager.profile.application.commands.CreateCustomerCommand;
 import com.techonwheels.wheelmanager.profile.domain.dto.request.CustomerRequest;
@@ -21,7 +21,7 @@ public class CustomerCommandsController {
     }
     
     @PostMapping
-    public String addProduct(@RequestBody CustomerRequest customerRequest) {
+    public String addCustomer(@RequestBody CustomerRequest customerRequest) {
         CreateCustomerCommand createCustomerCommand =
                 CreateCustomerCommand
                         .builder()

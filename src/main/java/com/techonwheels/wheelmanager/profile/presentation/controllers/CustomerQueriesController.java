@@ -1,4 +1,4 @@
-package com.techonwheels.wheelmanager.profile.presentation.controllers.queries;
+package com.techonwheels.wheelmanager.profile.presentation.controllers;
 
 import com.techonwheels.wheelmanager.profile.application.queries.GetCustomerByIdQuery;
 import com.techonwheels.wheelmanager.profile.application.queries.GetCustomersQuery;
@@ -18,6 +18,9 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/api/customers")
 public class CustomerQueriesController {
+
+    //Check Event Store
+
     private final QueryGateway queryGateway;
     
     public CustomerQueriesController(QueryGateway queryGateway) {
