@@ -21,7 +21,7 @@ public class CustomerCommandsController {
     }
     
     @PostMapping
-    public String addProduct(@RequestBody CustomerRequest customerRequest) {
+    public String addCustomer(@RequestBody CustomerRequest customerRequest) {
         CreateCustomerCommand createCustomerCommand =
                 CreateCustomerCommand
                         .builder()

@@ -18,6 +18,9 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/api/customers")
 public class CustomerQueriesController {
+
+    //Check Event Store
+
     private final QueryGateway queryGateway;
     
     public CustomerQueriesController(QueryGateway queryGateway) {
