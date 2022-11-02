@@ -1,4 +1,4 @@
-package com.techonwheels.wheelmanager.profile.presentation.controllers.commands;
+package com.techonwheels.wheelmanager.profile.presentation.controllers;
 
 import com.techonwheels.wheelmanager.profile.application.commands.CreateCustomerCommand;
 import com.techonwheels.wheelmanager.profile.domain.dto.request.CustomerRequest;

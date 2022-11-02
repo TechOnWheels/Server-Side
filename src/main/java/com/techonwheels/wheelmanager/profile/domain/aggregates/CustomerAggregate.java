@@ -9,8 +9,6 @@ import org.axonframework.modelling.command.AggregateLifecycle;
 import org.axonframework.spring.stereotype.Aggregate;
 import org.springframework.beans.BeanUtils;
 
-import java.util.UUID;
-
 @Aggregate
 public class CustomerAggregate {
     @AggregateIdentifier
@@ -22,6 +20,10 @@ public class CustomerAggregate {
     private String address;
     private Integer qualification;
     
+    public CustomerAggregate() {
+    
+    }
+    
     @CommandHandler
     public CustomerAggregate(CreateCustomerCommand createCustomerCommand) {
         CustomerCreatedEvent customerCreatedEvent = new CustomerCreatedEvent();
@@ -29,9 +31,6 @@ public class CustomerAggregate {
         AggregateLifecycle.apply(customerCreatedEvent);
     }
     
-    public CustomerAggregate() {
-    
-    }
     
     @EventSourcingHandler
     public void on(CustomerCreatedEvent customerCreatedEvent) {
