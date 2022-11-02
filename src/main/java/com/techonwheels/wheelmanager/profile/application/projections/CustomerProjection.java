@@ -21,7 +21,7 @@ public class CustomerProjection {
     }
     
     @QueryHandler
-    public List<CustomerResponse> handle(GetCustomersQuery getCustomersQuery) {
+    public List<CustomerResponse> on(GetCustomersQuery getCustomersQuery) {
         List<Customer> customers = customerRepository.findAll();
         
         List<CustomerResponse> customerResponses = customers.stream()
@@ -40,7 +40,7 @@ public class CustomerProjection {
     }
     
     @QueryHandler
-    public Optional<CustomerResponse> handle(GetCustomerByIdQuery getCustomerByIdQuery) {
+    public Optional<CustomerResponse> on(GetCustomerByIdQuery getCustomerByIdQuery) {
         Optional<Customer> customer = customerRepository.findById(getCustomerByIdQuery.customerId);
         Optional<CustomerResponse> customerResponse = customer.map(customerResponse1 -> CustomerResponse
                 .builder()
