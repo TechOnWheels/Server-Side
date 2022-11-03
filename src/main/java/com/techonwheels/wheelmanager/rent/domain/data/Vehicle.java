@@ -1,11 +1,10 @@
 package com.techonwheels.wheelmanager.rent.domain.data;
 
+import com.techonwheels.wheelmanager.rent.domain.valueobjects.Brand;
+import com.techonwheels.wheelmanager.rent.domain.valueobjects.Status;
 import lombok.Data;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Data
 @Table(name = "vehicles")
@@ -23,10 +22,18 @@ public class Vehicle {
     private Double price;
     @Column(name = "qualification", nullable = false)
     private Double qualification;
-    @Column(name = "vehicle_status", nullable = false, length = 50)
-    private String status;
-    @Column(name = "brand", nullable = false, length = 50)
-    private String brand;
+    @Embedded
+    @AttributeOverrides({
+            @AttributeOverride(name = "statusVehicle",
+                    column = @Column(name = "vehicle_status", nullable = false, length = 50))
+    })
+    private Status status;
+    @Embedded
+    @AttributeOverrides({
+            @AttributeOverride(name = "brandName",
+                    column = @Column(name = "brand_name", nullable = false, length = 50))
+    })
+    private Brand brand;
     @Column(name = "vehicle_type", nullable = false, length = 50)
     private String type;
     @Column(name = "vehicle_owner_id", nullable = false, length = 50)
