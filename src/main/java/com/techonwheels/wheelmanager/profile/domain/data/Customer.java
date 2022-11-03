@@ -41,6 +41,4 @@ public class Customer {
                     column = @Column(name = "country_address", nullable = false, length = 50))
     })
     private Address address;
-    @Column(name = "qualification", nullable = false)
-    private Integer qualification;
 }

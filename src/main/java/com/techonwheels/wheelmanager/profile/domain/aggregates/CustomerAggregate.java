@@ -21,7 +21,6 @@ public class CustomerAggregate {
     private String phone;
     private String password;
     private Address address;
-    private Integer qualification;
     
     public CustomerAggregate() {
     
@@ -43,6 +42,5 @@ public class CustomerAggregate {
         this.phone = customerCreatedEvent.getPhone();
         this.password = customerCreatedEvent.getPassword();
         this.address = customerCreatedEvent.getAddress();
-        this.qualification = customerCreatedEvent.getQualification();
     }
 }

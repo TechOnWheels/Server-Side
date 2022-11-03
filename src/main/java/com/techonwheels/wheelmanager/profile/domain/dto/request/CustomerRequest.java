@@ -14,5 +14,4 @@ public class CustomerRequest {
     private String phone;
     private String password;
     private Address address;
-    private Integer qualification;
 }

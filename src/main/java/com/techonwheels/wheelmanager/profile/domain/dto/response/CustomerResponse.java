@@ -15,5 +15,4 @@ public class CustomerResponse {
     private String phone;
     private String password;
     private Address address;
-    private Integer qualification;
 }

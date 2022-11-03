@@ -31,7 +31,6 @@ public class CustomerCommandsController {
                         .phone(customerRequest.getPhone())
                         .password(customerRequest.getPassword())
                         .address(customerRequest.getAddress())
-                        .qualification(customerRequest.getQualification())
                         .build();
         String result = commandGateway.sendAndWait(createCustomerCommand);
         return result;
