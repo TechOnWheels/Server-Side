@@ -2,6 +2,9 @@ package com.techonwheels.wheelmanager.profile.domain.aggregates;
 
 import com.techonwheels.wheelmanager.profile.application.commands.CreateCustomerCommand;
 import com.techonwheels.wheelmanager.profile.application.events.CustomerCreatedEvent;
+import com.techonwheels.wheelmanager.profile.domain.valueobjects.Address;
+import com.techonwheels.wheelmanager.profile.domain.valueobjects.Email;
+import com.techonwheels.wheelmanager.profile.domain.valueobjects.Name;
 import org.axonframework.commandhandling.CommandHandler;
 import org.axonframework.eventsourcing.EventSourcingHandler;
 import org.axonframework.modelling.command.AggregateIdentifier;
@@ -13,11 +16,11 @@ import org.springframework.beans.BeanUtils;
 public class CustomerAggregate {
     @AggregateIdentifier
     private String customerId;
-    private String name;
-    private String email;
+    private Name name;
+    private Email email;
     private String phone;
     private String password;
-    private String address;
+    private Address address;
     private Integer qualification;
     
     public CustomerAggregate() {
