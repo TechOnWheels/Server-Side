@@ -11,16 +11,15 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("/api/vehicles")
+@RequestMapping("/api")
 public class VehicleCommandsController {
-    
     private final CommandGateway commandGateway;
     
     public VehicleCommandsController(CommandGateway commandGateway) {
         this.commandGateway = commandGateway;
     }
     
-    @PostMapping
+    @PostMapping("/vehicles")
     public String addVehicle(@RequestBody VehicleRequest vehicleRequest) {
         CreateVehicleCommand createVehicleCommand =
                 CreateVehicleCommand

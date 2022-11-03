@@ -1,5 +1,6 @@
 package com.techonwheels.wheelmanager.rent.domain.aggregates;
 
+import com.techonwheels.wheelmanager.profile.domain.data.Customer;
 import com.techonwheels.wheelmanager.rent.application.commands.CreateVehicleCommand;
 import com.techonwheels.wheelmanager.rent.application.events.VehicleCreatedEvent;
 import com.techonwheels.wheelmanager.rent.domain.valueobjects.Brand;

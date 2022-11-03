@@ -1,5 +1,6 @@
 package com.techonwheels.wheelmanager.rent.application.events;
 
+import com.techonwheels.wheelmanager.profile.domain.data.Customer;
 import com.techonwheels.wheelmanager.rent.domain.valueobjects.Brand;
 import com.techonwheels.wheelmanager.rent.domain.valueobjects.Status;
 import lombok.AllArgsConstructor;

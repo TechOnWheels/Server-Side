@@ -1,5 +1,6 @@
 package com.techonwheels.wheelmanager.rent.domain.dto.response;
 
+import com.techonwheels.wheelmanager.profile.domain.data.Customer;
 import com.techonwheels.wheelmanager.rent.domain.valueobjects.Brand;
 import com.techonwheels.wheelmanager.rent.domain.valueobjects.Status;
 import lombok.Builder;
@@ -17,5 +18,5 @@ public class VehicleResponse {
     private Status status;
     private Brand brand;
     private String type;
-    private String ownerId;
+    private Customer ownerId;
 }

@@ -1,5 +1,6 @@
 package com.techonwheels.wheelmanager.rent.domain.data;
 
+import com.techonwheels.wheelmanager.profile.domain.data.Customer;
 import com.techonwheels.wheelmanager.rent.domain.valueobjects.Brand;
 import com.techonwheels.wheelmanager.rent.domain.valueobjects.Status;
 import lombok.Data;
@@ -35,7 +36,10 @@ public class Vehicle {
     })
     private Brand brand;
     @Column(name = "vehicle_type", nullable = false, length = 50)
+    //    @ManyToOne(optional = false, cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    //    @JoinColumn(name = "vehicle_type", nullable = false)
     private String type;
-    @Column(name = "vehicle_owner_id", nullable = false, length = 50)
-    private String ownerId;
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "vehicle_owner_id", referencedColumnName = "customerId")
+    private Customer ownerId;
 }
