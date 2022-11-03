@@ -11,7 +11,7 @@ public class VehicleResponse {
     private String imageURL;
     private String description;
     private Double price;
-    //Value Objects
+    private Double qualification;
     private String status;
     private String brand;
     private String type;

@@ -17,6 +17,7 @@ public class VehicleAggregate {
     private String imageURL;
     private String description;
     private Double price;
+    private Double qualification;
     private String status;
     private String brand;
     private String type;
@@ -40,6 +41,7 @@ public class VehicleAggregate {
         this.imageURL = vehicleCreatedEvent.getImageURL();
         this.description = vehicleCreatedEvent.getDescription();
         this.price = vehicleCreatedEvent.getPrice();
+        this.qualification = vehicleCreatedEvent.getQualification();
         this.status = vehicleCreatedEvent.getStatus();
         this.brand = vehicleCreatedEvent.getBrand();
         this.type = vehicleCreatedEvent.getType();

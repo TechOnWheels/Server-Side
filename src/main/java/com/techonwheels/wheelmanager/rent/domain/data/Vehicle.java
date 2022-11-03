@@ -21,6 +21,8 @@ public class Vehicle {
     private String description;
     @Column(name = "price", nullable = false)
     private Double price;
+    @Column(name = "qualification", nullable = false)
+    private Double qualification;
     @Column(name = "vehicle_status", nullable = false, length = 50)
     private String status;
     @Column(name = "brand", nullable = false, length = 50)

@@ -30,6 +30,7 @@ public class VehicleCommandsController {
                         .imageURL(vehicleRequest.getImageURL())
                         .description(vehicleRequest.getDescription())
                         .price(vehicleRequest.getPrice())
+                        .qualification(vehicleRequest.getQualification())
                         .status(vehicleRequest.getStatus())
                         .brand(vehicleRequest.getBrand())
                         .type(vehicleRequest.getType())

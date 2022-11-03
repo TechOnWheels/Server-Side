@@ -15,6 +15,7 @@ public class VehicleCreatedEvent {
     private String imageURL;
     private String description;
     private Double price;
+    private Double qualification;
     private String status;
     private String brand;
     private String type;
