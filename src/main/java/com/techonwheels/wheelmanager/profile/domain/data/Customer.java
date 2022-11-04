@@ -1,11 +1,15 @@
 package com.techonwheels.wheelmanager.profile.domain.data;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.techonwheels.wheelmanager.profile.domain.valueobjects.Address;
 import com.techonwheels.wheelmanager.profile.domain.valueobjects.Email;
 import com.techonwheels.wheelmanager.profile.domain.valueobjects.Name;
+import com.techonwheels.wheelmanager.rent.domain.data.Vehicle;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Data
 @Table(name = "customers")
@@ -41,6 +45,8 @@ public class Customer {
                     column = @Column(name = "country_address", nullable = false, length = 50))
     })
     private Address address;
-    @Column(name = "qualification", nullable = false)
-    private Integer qualification;
+    
+    @JsonIgnore
+    @OneToMany(mappedBy = "ownerId")
+    private Set<Vehicle> vehicles = new HashSet<>();
 }

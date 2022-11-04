@@ -33,7 +33,6 @@ public class CustomerProjection {
                         .phone(customer.getPhone())
                         .password(customer.getPassword())
                         .address(customer.getAddress())
-                        .qualification(customer.getQualification())
                         .build())
                 .collect(Collectors.toList());
         return customerResponses;
@@ -50,7 +49,6 @@ public class CustomerProjection {
                 .phone(customerResponse1.getPhone())
                 .password(customerResponse1.getPassword())
                 .address(customerResponse1.getAddress())
-                .qualification(customerResponse1.getQualification())
                 .build());
         return customerResponse;
     }
