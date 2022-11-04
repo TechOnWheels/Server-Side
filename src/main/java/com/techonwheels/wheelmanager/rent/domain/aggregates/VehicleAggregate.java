@@ -1,6 +1,5 @@
 package com.techonwheels.wheelmanager.rent.domain.aggregates;
 
-import com.techonwheels.wheelmanager.profile.domain.data.Customer;
 import com.techonwheels.wheelmanager.rent.application.commands.CreateVehicleCommand;
 import com.techonwheels.wheelmanager.rent.application.events.VehicleCreatedEvent;
 import com.techonwheels.wheelmanager.rent.domain.valueobjects.Brand;
@@ -23,7 +22,7 @@ public class VehicleAggregate {
     private Double qualification;
     private Status status;
     private Brand brand;
-    private String type;
+    private String vehicleTypeId;
     private String ownerId;
     
     public VehicleAggregate() {
@@ -47,7 +46,7 @@ public class VehicleAggregate {
         this.qualification = vehicleCreatedEvent.getQualification();
         this.status = vehicleCreatedEvent.getStatus();
         this.brand = vehicleCreatedEvent.getBrand();
-        this.type = vehicleCreatedEvent.getType();
+        this.vehicleTypeId = vehicleCreatedEvent.getVehicleTypeId();
         this.ownerId = vehicleCreatedEvent.getOwnerId();
     }
 }

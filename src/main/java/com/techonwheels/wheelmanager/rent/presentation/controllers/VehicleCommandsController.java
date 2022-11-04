@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/vehicles")
 public class VehicleCommandsController {
     private final CommandGateway commandGateway;
     
@@ -19,7 +19,7 @@ public class VehicleCommandsController {
         this.commandGateway = commandGateway;
     }
     
-    @PostMapping("/vehicles")
+    @PostMapping
     public String addVehicle(@RequestBody VehicleRequest vehicleRequest) {
         CreateVehicleCommand createVehicleCommand =
                 CreateVehicleCommand
@@ -32,7 +32,7 @@ public class VehicleCommandsController {
                         .qualification(vehicleRequest.getQualification())
                         .status(vehicleRequest.getStatus())
                         .brand(vehicleRequest.getBrand())
-                        .type(vehicleRequest.getType())
+                        .vehicleTypeId(vehicleRequest.getVehicleTypeId())
                         .ownerId(vehicleRequest.getOwnerId())
                         .build();
         String result = commandGateway.sendAndWait(createVehicleCommand);

@@ -35,10 +35,9 @@ public class Vehicle {
                     column = @Column(name = "brand_name", nullable = false, length = 50))
     })
     private Brand brand;
-    @Column(name = "vehicle_type", nullable = false, length = 50)
-    //    @ManyToOne(optional = false, cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    //    @JoinColumn(name = "vehicle_type", nullable = false)
-    private String type;
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "vehicle_type_id", referencedColumnName = "typeId")
+    private VehicleType vehicleTypeId;
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "vehicle_owner_id", referencedColumnName = "customerId")
     private Customer ownerId;

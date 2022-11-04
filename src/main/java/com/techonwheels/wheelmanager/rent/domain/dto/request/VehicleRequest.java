@@ -15,6 +15,6 @@ public class VehicleRequest {
     private Double qualification;
     private Status status;
     private Brand brand;
-    private String type;
+    private String vehicleTypeId;
     private String ownerId;
 }
