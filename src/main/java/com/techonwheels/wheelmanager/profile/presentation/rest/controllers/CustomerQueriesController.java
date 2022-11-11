@@ -1,4 +1,4 @@
-package com.techonwheels.wheelmanager.profile.presentation.controllers;
+package com.techonwheels.wheelmanager.profile.presentation.rest.controllers;
 
 import com.techonwheels.wheelmanager.profile.application.queries.GetCustomerByIdQuery;
 import com.techonwheels.wheelmanager.profile.application.queries.GetCustomersQuery;

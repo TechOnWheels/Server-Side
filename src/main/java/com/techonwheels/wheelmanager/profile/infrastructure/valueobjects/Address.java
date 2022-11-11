@@ -1,4 +1,4 @@
-package com.techonwheels.wheelmanager.profile.domain.valueobjects;
+package com.techonwheels.wheelmanager.profile.infrastructure.valueobjects;
 
 import lombok.Data;
 

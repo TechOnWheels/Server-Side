@@ -1,10 +1,10 @@
 package com.techonwheels.wheelmanager.rent.application.handlers;
 
-import com.techonwheels.wheelmanager.profile.domain.data.Customer;
+import com.techonwheels.wheelmanager.profile.infrastructure.data.Customer;
 import com.techonwheels.wheelmanager.profile.domain.repositories.CustomerRepository;
 import com.techonwheels.wheelmanager.rent.application.events.VehicleCreatedEvent;
-import com.techonwheels.wheelmanager.rent.domain.data.Vehicle;
-import com.techonwheels.wheelmanager.rent.domain.data.VehicleType;
+import com.techonwheels.wheelmanager.rent.infrastructure.data.Vehicle;
+import com.techonwheels.wheelmanager.rent.infrastructure.data.VehicleType;
 import com.techonwheels.wheelmanager.rent.domain.repositories.VehicleRepository;
 import com.techonwheels.wheelmanager.rent.domain.repositories.VehicleTypeRepository;
 import org.axonframework.config.ProcessingGroup;

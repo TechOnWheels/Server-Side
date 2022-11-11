@@ -1,7 +1,7 @@
 package com.techonwheels.wheelmanager.rent.application.commands;
 
-import com.techonwheels.wheelmanager.rent.domain.valueobjects.Brand;
-import com.techonwheels.wheelmanager.rent.domain.valueobjects.Status;
+import com.techonwheels.wheelmanager.rent.infrastructure.valueobjects.Brand;
+import com.techonwheels.wheelmanager.rent.infrastructure.valueobjects.Status;
 import lombok.Builder;
 import lombok.Data;
 import org.axonframework.modelling.command.TargetAggregateIdentifier;

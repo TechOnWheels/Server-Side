@@ -1,4 +1,4 @@
-package com.techonwheels.wheelmanager.rent.domain.data;
+package com.techonwheels.wheelmanager.rent.infrastructure.data;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;

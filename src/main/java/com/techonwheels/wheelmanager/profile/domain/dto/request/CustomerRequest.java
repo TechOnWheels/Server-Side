@@ -1,8 +1,8 @@
 package com.techonwheels.wheelmanager.profile.domain.dto.request;
 
-import com.techonwheels.wheelmanager.profile.domain.valueobjects.Address;
-import com.techonwheels.wheelmanager.profile.domain.valueobjects.Email;
-import com.techonwheels.wheelmanager.profile.domain.valueobjects.Name;
+import com.techonwheels.wheelmanager.profile.infrastructure.valueobjects.Address;
+import com.techonwheels.wheelmanager.profile.infrastructure.valueobjects.Email;
+import com.techonwheels.wheelmanager.profile.infrastructure.valueobjects.Name;
 import lombok.Builder;
 import lombok.Data;
 

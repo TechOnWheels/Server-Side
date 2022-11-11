@@ -2,7 +2,7 @@ package com.techonwheels.wheelmanager.profile.application.projections;
 
 import com.techonwheels.wheelmanager.profile.application.queries.GetCustomerByIdQuery;
 import com.techonwheels.wheelmanager.profile.application.queries.GetCustomersQuery;
-import com.techonwheels.wheelmanager.profile.domain.data.Customer;
+import com.techonwheels.wheelmanager.profile.infrastructure.data.Customer;
 import com.techonwheels.wheelmanager.profile.domain.dto.response.CustomerResponse;
 import com.techonwheels.wheelmanager.profile.domain.repositories.CustomerRepository;
 import org.axonframework.queryhandling.QueryHandler;

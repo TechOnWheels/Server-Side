@@ -1,4 +1,4 @@
-package com.techonwheels.wheelmanager.rent.presentation.controllers;
+package com.techonwheels.wheelmanager.rent.presentation.rest.controllers;
 
 import com.techonwheels.wheelmanager.rent.application.commands.CreateVehicleCommand;
 import com.techonwheels.wheelmanager.rent.domain.dto.request.VehicleRequest;

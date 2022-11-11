@@ -1,7 +1,7 @@
 package com.techonwheels.wheelmanager.profile.application.handlers;
 
 import com.techonwheels.wheelmanager.profile.application.events.CustomerCreatedEvent;
-import com.techonwheels.wheelmanager.profile.domain.data.Customer;
+import com.techonwheels.wheelmanager.profile.infrastructure.data.Customer;
 import com.techonwheels.wheelmanager.profile.domain.repositories.CustomerRepository;
 import org.axonframework.config.ProcessingGroup;
 import org.axonframework.eventhandling.EventHandler;

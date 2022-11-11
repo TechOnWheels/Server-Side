@@ -2,8 +2,8 @@ package com.techonwheels.wheelmanager.rent.domain.aggregates;
 
 import com.techonwheels.wheelmanager.rent.application.commands.CreateVehicleCommand;
 import com.techonwheels.wheelmanager.rent.application.events.VehicleCreatedEvent;
-import com.techonwheels.wheelmanager.rent.domain.valueobjects.Brand;
-import com.techonwheels.wheelmanager.rent.domain.valueobjects.Status;
+import com.techonwheels.wheelmanager.rent.infrastructure.valueobjects.Brand;
+import com.techonwheels.wheelmanager.rent.infrastructure.valueobjects.Status;
 import org.axonframework.commandhandling.CommandHandler;
 import org.axonframework.eventsourcing.EventSourcingHandler;
 import org.axonframework.modelling.command.AggregateIdentifier;
