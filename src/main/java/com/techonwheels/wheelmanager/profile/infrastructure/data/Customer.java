@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.techonwheels.wheelmanager.profile.infrastructure.valueobjects.Address;
 import com.techonwheels.wheelmanager.profile.infrastructure.valueobjects.Email;
 import com.techonwheels.wheelmanager.profile.infrastructure.valueobjects.Name;
+import com.techonwheels.wheelmanager.rent.infrastructure.data.Book;
 import com.techonwheels.wheelmanager.rent.infrastructure.data.Vehicle;
 import lombok.Data;
 
@@ -49,4 +50,8 @@ public class Customer {
     @JsonIgnore
     @OneToMany(mappedBy = "ownerId")
     private Set<Vehicle> vehicles = new HashSet<>();
+    
+    @JsonIgnore
+    @OneToMany(mappedBy = "bookId")
+    private Set<Book> bookings = new HashSet<>();
 }

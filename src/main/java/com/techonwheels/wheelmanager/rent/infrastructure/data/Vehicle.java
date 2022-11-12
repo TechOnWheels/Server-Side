@@ -1,11 +1,15 @@
 package com.techonwheels.wheelmanager.rent.infrastructure.data;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.techonwheels.wheelmanager.profile.infrastructure.data.Customer;
 import com.techonwheels.wheelmanager.rent.infrastructure.valueobjects.Brand;
 import com.techonwheels.wheelmanager.rent.infrastructure.valueobjects.Status;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
+import java.util.HashSet;
+import java.util.Set;
 
 @Data
 @Table(name = "vehicles")
@@ -20,7 +24,7 @@ public class Vehicle {
     @Column(name = "description", nullable = false, length = 50)
     private String description;
     @Column(name = "price", nullable = false)
-    private Double price;
+    private BigDecimal price;
     @Column(name = "qualification", nullable = false)
     private Double qualification;
     @Embedded
@@ -41,4 +45,8 @@ public class Vehicle {
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "vehicle_owner_id", referencedColumnName = "customerId")
     private Customer ownerId;
+    
+    @JsonIgnore
+    @OneToMany(mappedBy = "bookId")
+    private Set<Book> bookings = new HashSet<>();
 }

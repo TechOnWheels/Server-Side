@@ -11,6 +11,8 @@ import org.axonframework.modelling.command.AggregateLifecycle;
 import org.axonframework.spring.stereotype.Aggregate;
 import org.springframework.beans.BeanUtils;
 
+import java.math.BigDecimal;
+
 @Aggregate
 public class VehicleAggregate {
     @AggregateIdentifier
@@ -18,7 +20,7 @@ public class VehicleAggregate {
     private String vehicleName;
     private String imageURL;
     private String description;
-    private Double price;
+    private BigDecimal price;
     private Double qualification;
     private Status status;
     private Brand brand;
