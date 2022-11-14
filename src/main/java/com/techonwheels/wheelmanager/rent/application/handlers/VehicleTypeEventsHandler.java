@@ -1,7 +1,7 @@
 package com.techonwheels.wheelmanager.rent.application.handlers;
 
 import com.techonwheels.wheelmanager.rent.application.events.VehicleTypeCreatedEvent;
-import com.techonwheels.wheelmanager.rent.domain.data.VehicleType;
+import com.techonwheels.wheelmanager.rent.infrastructure.data.VehicleType;
 import com.techonwheels.wheelmanager.rent.domain.repositories.VehicleTypeRepository;
 import org.axonframework.config.ProcessingGroup;
 import org.axonframework.eventhandling.EventHandler;

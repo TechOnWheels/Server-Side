@@ -2,9 +2,9 @@ package com.techonwheels.wheelmanager.profile.domain.aggregates;
 
 import com.techonwheels.wheelmanager.profile.application.commands.CreateCustomerCommand;
 import com.techonwheels.wheelmanager.profile.application.events.CustomerCreatedEvent;
-import com.techonwheels.wheelmanager.profile.domain.valueobjects.Address;
-import com.techonwheels.wheelmanager.profile.domain.valueobjects.Email;
-import com.techonwheels.wheelmanager.profile.domain.valueobjects.Name;
+import com.techonwheels.wheelmanager.profile.infrastructure.valueobjects.Address;
+import com.techonwheels.wheelmanager.profile.infrastructure.valueobjects.Email;
+import com.techonwheels.wheelmanager.profile.infrastructure.valueobjects.Name;
 import org.axonframework.commandhandling.CommandHandler;
 import org.axonframework.eventsourcing.EventSourcingHandler;
 import org.axonframework.modelling.command.AggregateIdentifier;
