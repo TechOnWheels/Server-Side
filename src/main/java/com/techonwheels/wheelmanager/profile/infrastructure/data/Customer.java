@@ -1,6 +1,8 @@
 package com.techonwheels.wheelmanager.profile.infrastructure.data;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.techonwheels.wheelmanager.community.infrastructure.data.Comment;
+import com.techonwheels.wheelmanager.community.infrastructure.data.Favorite;
 import com.techonwheels.wheelmanager.profile.infrastructure.valueobjects.Address;
 import com.techonwheels.wheelmanager.profile.infrastructure.valueobjects.Email;
 import com.techonwheels.wheelmanager.profile.infrastructure.valueobjects.Name;
@@ -54,4 +56,12 @@ public class Customer {
     @JsonIgnore
     @OneToMany(mappedBy = "bookId")
     private Set<Book> bookings = new HashSet<>();
+    
+    @JsonIgnore
+    @OneToMany(mappedBy = "commentId")
+    private Set<Comment> comments = new HashSet<>();
+    
+    @JsonIgnore
+    @OneToMany(mappedBy = "favoriteId")
+    private Set<Favorite> favorites = new HashSet<>();
 }
