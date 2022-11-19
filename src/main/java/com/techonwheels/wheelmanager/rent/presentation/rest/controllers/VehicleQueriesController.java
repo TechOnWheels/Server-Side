@@ -5,6 +5,8 @@ import com.techonwheels.wheelmanager.rent.application.queries.GetVehiclesByOwner
 import com.techonwheels.wheelmanager.rent.application.queries.GetVehiclesByTypeNameQuery;
 import com.techonwheels.wheelmanager.rent.application.queries.GetVehiclesQuery;
 import com.techonwheels.wheelmanager.rent.domain.dto.response.VehicleResponse;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.axonframework.messaging.responsetypes.ResponseTypes;
 import org.axonframework.queryhandling.QueryGateway;
 import org.springframework.http.HttpStatus;
@@ -15,6 +17,7 @@ import java.util.List;
 import java.util.Optional;
 
 @CrossOrigin
+@Tag(name = "Vehicles Queries")
 @RestController
 @RequestMapping("/api/vehicles")
 public class VehicleQueriesController {
@@ -25,6 +28,7 @@ public class VehicleQueriesController {
     }
     
     @GetMapping
+    @Operation(summary = "Get All Vehicles")
     public List<VehicleResponse> getAllVehicles() {
         GetVehiclesQuery getVehiclesQuery = new GetVehiclesQuery();
         List<VehicleResponse> vehicleResponses = queryGateway.query(getVehiclesQuery,
@@ -33,6 +37,7 @@ public class VehicleQueriesController {
     }
     
     @GetMapping("/{vehicleId}")
+    @Operation(summary = "Gget Vehicle By Id")
     public ResponseEntity<VehicleResponse> getVehicleById(@PathVariable String vehicleId) {
         GetVehicleByIdQuery getVehicleByIdQuery = new GetVehicleByIdQuery(vehicleId);
         Optional<VehicleResponse> vehicleResponse = queryGateway.query(getVehicleByIdQuery,
@@ -41,6 +46,7 @@ public class VehicleQueriesController {
     }
     
     @GetMapping("/filter")
+    @Operation(summary = "Get All Vehicles By Type Name")
     public List<VehicleResponse> getAllVehiclesByTypeName(@RequestParam(name = "vehicleTypeName") String vehicleTypeName) {
         GetVehiclesByTypeNameQuery getVehiclesByTypeNameQuery = new GetVehiclesByTypeNameQuery(vehicleTypeName);
         List<VehicleResponse> vehicleResponses = queryGateway.query(getVehiclesByTypeNameQuery,
@@ -49,6 +55,7 @@ public class VehicleQueriesController {
     }
     
     @GetMapping("/owner/{ownerId}")
+    @Operation(summary = "Get All Vehicles By Owner Id")
     public List<VehicleResponse> getAllVehiclesByOwnerId(@PathVariable String ownerId) {
         GetVehiclesByOwnerIdQuery getVehiclesByOwnerIdQuery = new GetVehiclesByOwnerIdQuery(ownerId);
         List<VehicleResponse> vehicleResponses = queryGateway.query(getVehiclesByOwnerIdQuery,

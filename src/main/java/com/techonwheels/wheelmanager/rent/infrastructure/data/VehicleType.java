@@ -1,6 +1,7 @@
 package com.techonwheels.wheelmanager.rent.infrastructure.data;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.techonwheels.wheelmanager.maintenance.infrastructure.data.Maintenance;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -19,4 +20,8 @@ public class VehicleType {
     @JsonIgnore
     @OneToMany(mappedBy = "vehicleTypeId")
     private Set<Vehicle> vehicles = new HashSet<>();
+    
+    @JsonIgnore
+    @OneToMany(mappedBy = "maintenanceId")
+    private Set<Maintenance> maintenances = new HashSet<>();
 }
