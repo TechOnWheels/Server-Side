@@ -46,7 +46,7 @@ public class CustomerQueriesController {
         emailRequest.setEmail(email);
         GetCustomerByEmailAndPasswordQuery getCustomerByEmailAndPasswordQuery =
                 new GetCustomerByEmailAndPasswordQuery(emailRequest,
-                password);
+                        password);
         Optional<CustomerResponse> customerResponse = queryGateway.query(getCustomerByEmailAndPasswordQuery,
                 ResponseTypes.optionalInstanceOf(CustomerResponse.class)).join();
         return new ResponseEntity<CustomerResponse>(customerResponse.get(), HttpStatus.OK);

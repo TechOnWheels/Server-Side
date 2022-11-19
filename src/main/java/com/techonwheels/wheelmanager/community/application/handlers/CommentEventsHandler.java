@@ -27,6 +27,7 @@ public class CommentEventsHandler {
         this.customerRepository = customerRepository;
         this.vehicleRepository = vehicleRepository;
     }
+    
     @EventHandler
     public void on(CommentCreatedEvent commentCreatedEvent) {
         Comment comment = new Comment();
