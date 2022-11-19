@@ -5,6 +5,8 @@ import com.techonwheels.wheelmanager.profile.application.queries.GetCustomerById
 import com.techonwheels.wheelmanager.profile.application.queries.GetCustomersQuery;
 import com.techonwheels.wheelmanager.profile.domain.dto.response.CustomerResponse;
 import com.techonwheels.wheelmanager.profile.infrastructure.valueobjects.Email;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.axonframework.messaging.responsetypes.ResponseTypes;
 import org.axonframework.queryhandling.QueryGateway;
 import org.springframework.http.HttpStatus;
@@ -15,6 +17,7 @@ import java.util.List;
 import java.util.Optional;
 
 @CrossOrigin
+@Tag(name = "Customer Queries")
 @RestController
 @RequestMapping("/api/customers")
 public class CustomerQueriesController {
@@ -25,6 +28,7 @@ public class CustomerQueriesController {
     }
     
     @GetMapping
+    @Operation(summary = "Get All Customers")
     public List<CustomerResponse> getAllCustomers() {
         GetCustomersQuery getCustomersQuery = new GetCustomersQuery();
         List<CustomerResponse> customerResponses = queryGateway.query(getCustomersQuery,
@@ -33,6 +37,7 @@ public class CustomerQueriesController {
     }
     
     @GetMapping("/{customerId}")
+    @Operation(summary = "Get Customers By Id")
     public ResponseEntity<CustomerResponse> getCustomerById(@PathVariable String customerId) {
         GetCustomerByIdQuery getCustomerByIdQuery = new GetCustomerByIdQuery(customerId);
         Optional<CustomerResponse> customerResponse = queryGateway.query(getCustomerByIdQuery,
@@ -41,6 +46,7 @@ public class CustomerQueriesController {
     }
     
     @GetMapping("/logging")
+    @Operation(summary = "Logging")
     public ResponseEntity<CustomerResponse> getCustomerByEmailAndPassword(@RequestParam(name = "email") String email,
                                                                           @RequestParam(name = "password") String password) {
         Email emailRequest = new Email();

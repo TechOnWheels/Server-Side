@@ -2,12 +2,15 @@ package com.techonwheels.wheelmanager.rent.presentation.rest.controllers;
 
 import com.techonwheels.wheelmanager.rent.application.commands.CreateBookCommand;
 import com.techonwheels.wheelmanager.rent.domain.dto.request.BookRequest;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.axonframework.commandhandling.gateway.CommandGateway;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.UUID;
 
 @CrossOrigin
+@Tag(name = "Booking Commands")
 @RestController
 @RequestMapping("/api/booking")
 public class BookCommandsController {
@@ -18,6 +21,7 @@ public class BookCommandsController {
     }
     
     @PostMapping
+    @Operation(summary = "Post Booking")
     public String addBook(@RequestBody BookRequest bookRequest) {
         CreateBookCommand createBookCommand =
                 CreateBookCommand
