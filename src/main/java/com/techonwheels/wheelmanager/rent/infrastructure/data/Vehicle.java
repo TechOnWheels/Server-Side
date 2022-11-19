@@ -6,6 +6,7 @@ import com.techonwheels.wheelmanager.community.infrastructure.data.Favorite;
 import com.techonwheels.wheelmanager.profile.infrastructure.data.Customer;
 import com.techonwheels.wheelmanager.rent.infrastructure.valueobjects.Brand;
 import com.techonwheels.wheelmanager.rent.infrastructure.valueobjects.Status;
+import com.techonwheels.wheelmanager.tracking.infrastructure.data.Gps;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -59,4 +60,8 @@ public class Vehicle {
     @JsonIgnore
     @OneToMany(mappedBy = "favoriteId")
     private Set<Favorite> favorites = new HashSet<>();
+    
+    @JsonIgnore
+    @OneToMany(mappedBy = "gpsId")
+    private Set<Gps> gps = new HashSet<>();
 }

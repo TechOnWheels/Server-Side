@@ -11,5 +11,6 @@ import java.util.List;
 @Repository
 public interface VehicleRepository extends JpaRepository<Vehicle, String> {
     List<Vehicle> findVehiclesByVehicleTypeId(VehicleType vehicleTypeId);
+    
     List<Vehicle> findVehiclesByOwnerId(Customer ownerId);
 }
