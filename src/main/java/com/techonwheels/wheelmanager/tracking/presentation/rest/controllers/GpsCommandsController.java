@@ -27,8 +27,8 @@ public class GpsCommandsController {
                         .gpsId(UUID.randomUUID().toString())
                         .latitudeGps(gpsRequest.getLatitudeGps())
                         .longitudeGps(gpsRequest.getLongitudeGps())
-                        .address(gpsRequest.getAddress())
-                        .gpsVehicleId(gpsRequest.getGpsVehicleId())
+                        .addressGps(gpsRequest.getAddressGps())
+                        .gpsVehicleOwnerId(gpsRequest.getGpsVehicleOwnerId())
                         .build();
         String result = commandGateway.sendAndWait(createGpsCommand);
         return result;

@@ -27,6 +27,6 @@ public class Gps {
     })
     private Address addressGps;
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "gps_vehicle_id", referencedColumnName = "vehicleId")
-    private Vehicle gpsVehicleId;
+    @JoinColumn(name = "gps_vehicle_owner_id", referencedColumnName = "vehicleId")
+    private Vehicle gpsVehicleOwnerId;
 }

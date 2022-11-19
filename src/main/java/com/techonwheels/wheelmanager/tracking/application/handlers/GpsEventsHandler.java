@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 import java.util.Optional;
 
 @Component
-@ProcessingGroup("gps")
+@ProcessingGroup("tracking")
 public class GpsEventsHandler {
     private final GpsRepository gpsRepository;
     private final VehicleRepository vehicleRepository;
@@ -27,8 +27,8 @@ public class GpsEventsHandler {
     public void on(GpsCreatedEvent gpsCreatedEvent) {
         Gps gps = new Gps();
         BeanUtils.copyProperties(gpsCreatedEvent, gps);
-        Optional<Vehicle> vehicleOptional = vehicleRepository.findById(gpsCreatedEvent.getGpsVehicleId());
-        vehicleOptional.ifPresent(gps::setGpsVehicleId);
+        Optional<Vehicle> vehicleOptional = vehicleRepository.findById(gpsCreatedEvent.getGpsVehicleOwnerId());
+        vehicleOptional.ifPresent(gps::setGpsVehicleOwnerId);
         gpsRepository.save(gps);
     }
 }

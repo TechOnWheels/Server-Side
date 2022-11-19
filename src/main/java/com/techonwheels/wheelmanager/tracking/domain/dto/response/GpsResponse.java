@@ -11,6 +11,6 @@ public class GpsResponse {
     private String gpsId;
     private Double latitudeGps;
     private Double longitudeGps;
-    private Address address;
-    private Vehicle gpsVehicleId;
+    private Address addressGps;
+    private Vehicle gpsVehicleOwnerId;
 }

@@ -16,8 +16,8 @@ public class GpsAggregate {
     private String gpsId;
     private Double latitudeGps;
     private Double longitudeGps;
-    private Address address;
-    private String gpsVehicleId;
+    private Address addressGps;
+    private String gpsVehicleOwnerId;
     
     public GpsAggregate() {
     }
@@ -34,7 +34,7 @@ public class GpsAggregate {
         this.gpsId = gpsCreatedEvent.getGpsId();
         this.latitudeGps = gpsCreatedEvent.getLatitudeGps();
         this.longitudeGps = gpsCreatedEvent.getLongitudeGps();
-        this.address = gpsCreatedEvent.getAddress();
-        this.gpsVehicleId = gpsCreatedEvent.getGpsVehicleId();
+        this.addressGps = gpsCreatedEvent.getAddressGps();
+        this.gpsVehicleOwnerId = gpsCreatedEvent.getGpsVehicleOwnerId();
     }
 }

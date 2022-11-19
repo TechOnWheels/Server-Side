@@ -14,6 +14,6 @@ public class GpsCreatedEvent {
     private String gpsId;
     private Double latitudeGps;
     private Double longitudeGps;
-    private Address address;
-    private String gpsVehicleId;
+    private Address addressGps;
+    private String gpsVehicleOwnerId;
 }

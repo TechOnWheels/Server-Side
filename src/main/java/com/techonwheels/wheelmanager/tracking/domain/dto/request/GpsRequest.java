@@ -9,6 +9,6 @@ import lombok.Data;
 public class GpsRequest {
     private Double latitudeGps;
     private Double longitudeGps;
-    private Address address;
-    private String gpsVehicleId;
+    private Address addressGps;
+    private String gpsVehicleOwnerId;
 }
