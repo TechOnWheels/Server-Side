@@ -3,13 +3,11 @@ package com.techonwheels.wheelmanager.tracking.presentation.rest.controllers;
 import com.techonwheels.wheelmanager.tracking.application.commands.CreateGpsCommand;
 import com.techonwheels.wheelmanager.tracking.domain.dto.request.GpsRequest;
 import org.axonframework.commandhandling.gateway.CommandGateway;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.UUID;
 
+@CrossOrigin
 @RestController
 @RequestMapping("/api/gps")
 public class GpsCommandsController {

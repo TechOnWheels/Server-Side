@@ -3,13 +3,11 @@ package com.techonwheels.wheelmanager.community.presentation.rest.controllers;
 import com.techonwheels.wheelmanager.community.application.commands.CreateFavoriteCommand;
 import com.techonwheels.wheelmanager.community.domain.dto.request.FavoriteRequest;
 import org.axonframework.commandhandling.gateway.CommandGateway;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.UUID;
 
+@CrossOrigin
 @RestController
 @RequestMapping("/api/favorites")
 public class FavoriteCommandsController {
